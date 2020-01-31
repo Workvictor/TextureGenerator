@@ -1,0 +1,38 @@
+.btn .caret {
+	margin-left: 5px;
+}
+
+.input-group {
+	margin-bottom: 10px;
+}
+
+.panel {
+	margin-bottom: 0;
+}
+
+.size_input .form-control {
+	display:     inline-block;
+	margin-left: 10px;
+	width:       50px;
+	text-align:  center;
+}
+
+.table label {
+	margin: 0;
+}
+
+.btn {
+	outline: none;
+}
+
+.table {
+	margin:  5px auto;
+	display: table;
+	width:   100%;
+}
+
+.table-cell {
+	display:        table-cell;
+	vertical-align: middle;
+	float:          none;
+}

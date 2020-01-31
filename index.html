@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Texture Generator</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-skin.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<section class="main-screen">
+	<div class="container config-panel">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="panel panel-primary">
+					<div class="panel-heading"><h3 class="panel-title">Настройка генерации текстуры</h3></div>
+					<div class="panel-body">
+						<label for="texture_size_input">
+							<span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+							Размер текстуры
+						</label>
+						<div class="input-group">
+							<div class="input-group-btn">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Выбрать<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a class="texture_size" data-value="4" href="#"></a></li>
+									<li><a class="texture_size" data-value="8" href="#"></a></li>
+									<li><a class="texture_size" data-value="16" href="#"></a></li>
+									<li><a class="texture_size" data-value="32" href="#"></a></li>
+									<li><a class="texture_size" data-value="64" href="#"></a></li>
+									<li><a class="texture_size" data-value="128" href="#"></a></li>
+									<li><a class="texture_size" data-value="256" href="#"></a></li>
+									<li><a class="texture_size" data-value="512" href="#"></a></li>
+								</ul>
+							</div>
+							<input id="texture_size_input" value="128" class="form-control" aria-label="Text input with dropdown button">
+						</div>
+						<div class="size_input table">
+							<div class="table-cell">
+								<label for="pixel_size_input">Размер пикселя:</label>
+							</div>
+							<div class="table-cell text-right">
+								<input class="form-control" type="text" id="pixel_size_input" value="1">
+							</div>
+						</div>
+						<div class="size_input table">
+							<div class="table-cell">
+								<label for="smooth_value_input">Величина сглаживания:</label>
+							</div>
+							<div class="table-cell text-right">
+								<input class="form-control" type="text" id="smooth_value_input" value="2">
+							</div>
+						</div>
+
+
+						<div id="color_input_group" class="color_input_group">
+							<div class="ui-panel">
+								<div class="panel panel-success">
+									<span class="ui ui-submit pull-right glyphicon glyphicon-ok"></span>
+									<span class="ui ui-close pull-right glyphicon glyphicon-remove"></span>
+									<div class="panel-heading"><h3 class="panel-title">
+										Выбор цвета </h3>
+									</div>
+									<div class="panel-body">
+										<div class="color_input table">
+											<div class="table-cell">
+												<label for="color_input">Цвет:</label>
+											</div>
+											<div class="table-cell">
+												<div id="color_preview" class="color-preview"></div>
+											</div>
+											<div class="table-cell text-right">
+												<input class="form-control" type="text" id="color_input" value="#000">
+											</div>
+										</div>
+										<div class="ui-color-picker">
+											<div class="hue">
+												<canvas class="gradient" id="gradient"></canvas>
+												<div id="slider_picker" class="slider-picker"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<p><a id="add_color_btn" class="btn btn-success btn-xs" aria-hidden="true">Добавить цвет
+							<span class="glyph-inline glyphicon glyphicon-plus"></span> </a></p>
+
+
+						<div class="btn-wrapper">
+							<button id="generate_btn" type="button" class="btn btn-primary">Сгенерировать
+							</button>
+							<a id="save_btn" type="button" class="save_btn btn-hide btn btn-success">Сохранить</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div id="canvas-container" class="canvas-thumbnail"></div>
+			</div>
+		</div>
+	</div>
+</section>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="engine/main.js"></script>
+</body>
+</html>
